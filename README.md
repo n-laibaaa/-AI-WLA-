@@ -5,3 +5,11 @@ A Knowledge-Based Agent that navigates a Wumpus World grid using Propositional L
 
 ## Setup
 
+### 1. Backend
+```
+cd backend
+pip install -r requirements.txt
+python app.py
+```
+
+
