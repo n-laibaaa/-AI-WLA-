@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wumpus Logic Agent</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+    <header>
+      <h1> Wumpus Logic Agent</h1>
+      <p>Laiba Najeeb Khan</p>
+    </header>
+
+    <div class="main">
+      <div class="sidebar">
+        <div class="card">
+          <h2>📡 Percepts</h2>
+          <div id="percepts" class="percept-box">—</div>
+        </div>
+        <div class="card">
+          <h2>📊 Metrics</h2>
+          <div class="metric"><span>Inference Steps</span><strong id="steps">0</strong></div>
+          <div class="metric"><span>Cells Visited</span><strong id="visited-count">0</strong></div>
+          <div class="metric"><span>Safe Cells Found</span><strong id="safe-count">0</strong></div>
+        </div>
+        <div class="card">
+          <h2>💬 Agent Log</h2>
+          <div id="log"></div>
+        </div>
+        <div class="card kb-panel">
+          <h2>🧩 KB Clauses</h2>
+          <div id="kb-info">Start a game to see KB activity.</div>
+        </div>
+      </div>
+
+      <div class="grid-wrap">
+        <div id="grid"></div>
+        <div id="legend">
+          <span class="dot safe"></span> Safe
+          <span class="dot visited"></span> Visited
+          <span class="dot unknown"></span> Unknown
+          <span class="dot danger"></span> Confirmed Hazard
+          <span class="dot agent"></span> Agent
+        </div>
+      </div>
+    </div>
+
+    <div class="setup-panel">
+      <label>Rows <input type="number" id="rows" value="4" min="2" max="8" /></label>
+      <label>Cols <input type="number" id="cols" value="4" min="2" max="8" /></label>
+      <button class="btn-primary" onclick="newGame()">New Game</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
